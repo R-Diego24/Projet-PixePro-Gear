@@ -1,0 +1,32 @@
+.hero-content {
+    grid-column: 6 span;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.img-hero {
+    grid-column: 6 span;
+}
+
+.w-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.w-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media screen and (max-width: 768px){
+    .hero-content {
+        grid-column: 12 span;
+    }
+
+    .img-hero {
+        grid-column: 12 span;
+    }
+}

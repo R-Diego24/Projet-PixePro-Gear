@@ -1,0 +1,40 @@
+.text {
+    color: #192229;
+}
+
+.text-lvl-1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.text-lvl-2 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.text-lvl-3 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.description {
+    line-height: 1.5;
+}
+
+.result-cart {
+    color: #F9ECE8;
+}
+
+@media (max-width: 768px) {
+    .text-lvl-1 {
+        font-size: 20px;
+    }
+
+    .text-lvl-2, .text-lvl-3 {
+        font-size: 14px;
+    }
+
+    .description {
+        line-height: 1.4;
+    }
+}

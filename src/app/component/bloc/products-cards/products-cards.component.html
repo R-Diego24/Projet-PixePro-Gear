@@ -1,0 +1,12 @@
+<div class="w-bloc">
+
+    <div class="w-title-products">
+        <app-title class="w-title-products" title="Explorez notre univers photographique" className="title title-lvl-2" level="2"></app-title>
+        <app-subtitle class="w-subtitle-products" subtitle="Des captures parfaites pour chaque instant" classSubtitle="subtitle-primary subtitle-lvl-2"></app-subtitle>
+    </div>
+
+    <app-card-product *ngFor="let product of products; let i = index" [product]="product" (addToCartEvent)="handleAddToCart(product)" class="card"></app-card-product>
+
+</div>
+
+<app-modal [show]="showModal" [title]="modalTitle" [message]="modalMessage"></app-modal>

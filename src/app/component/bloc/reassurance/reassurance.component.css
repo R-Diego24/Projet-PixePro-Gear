@@ -1,0 +1,15 @@
+.card-reassurance {
+    padding: 16px 24px;
+    grid-column: 3 span;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+@media screen and (max-width: 768px){
+    .card-reassurance {
+        grid-column: 12 span;
+    }
+}

@@ -1,0 +1,17 @@
+.link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-link {
+    color: #192229;
+    transition: all 0.3s ease;
+}
+
+.primary-link:hover {
+    color: #C5481B;
+}

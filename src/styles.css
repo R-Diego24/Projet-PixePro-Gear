@@ -1,0 +1,43 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.section {
+    position: relative;
+    padding: 40px 0;
+}
+
+.section-color {
+    background-color: #F9ECE8;
+}
+
+.section-overflow {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-lg {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.w-bloc {
+    display: grid;
+    align-items: center;
+    gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 24px 32px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

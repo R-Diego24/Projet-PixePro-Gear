@@ -1,0 +1,16 @@
+<div (click)="close()" class="modal-backdrop" *ngIf="show">
+  
+    <div class="modal-content">
+
+        <div class="w-txt-modal">
+            <app-title [title]="title" level="3" classTitle="title title-lvl-3"></app-title>
+            <app-text [text]="message" classText="text text-lvl-2"></app-text>
+        </div>
+
+        <div class="w-btn-modal">
+            <app-button (click)="close()" href="/test" btnText="Fermer" btnClass="btn btn-secondary"></app-button>
+        </div>
+
+    </div>
+
+</div>

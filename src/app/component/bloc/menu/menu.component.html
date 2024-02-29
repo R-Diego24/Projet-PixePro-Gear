@@ -1,0 +1,57 @@
+<div class="menu-mobile">
+
+    <div class="overlay" (click)="toggleMobileMenu()" [class.active]="mobileMenuActive"></div>
+
+    <div class="w-burger-menu">
+
+        <a href="/homepage">
+            <app-img src="../../../assets/img/logo.png" alt="Logo pixe pro gear" class="w-logo" imgClass="logo"></app-img>
+        </a>
+        <app-icon (click)="toggleMobileMenu()" iconClass="fas fa-bars"></app-icon>
+
+    </div>
+
+    <div class="menu-panel" [class.active]="mobileMenuActive">
+
+        <div class="close-menu">
+            <app-icon (click)="toggleMobileMenu()" iconClass="fas fa-times"></app-icon>
+        </div>
+
+        <div class="w-link">
+
+            <app-link (click)="toggleMobileMenu()" linkText="Accueil" href="/homepage" classLink="link primary-link"></app-link>
+            <app-link (click)="toggleMobileMenu()" linkText="Nos produits" href="/products" classLink="link primary-link"></app-link>
+            <app-link (click)="toggleMobileMenu()" linkText="Connexion" href="/connect" classLink="link primary-link" iconClass="fa-solid fa-user"></app-link>
+            <app-button (click)="toggleMobileMenu()" btnText="Panier" href="/cart" btnClass="btn btn-primary" iconClass="fas fa-shopping-cart"></app-button>
+
+        </div>
+    </div>
+
+</div>
+  
+
+<div class="menu-desktop">
+    <div class="w-link">
+        
+        <div class="w-link">
+
+            <app-link linkText="Accueil" href="/homepage" classLink="link primary-link"></app-link>
+            <app-link linkText="Nos produits" href="/products" classLink="link primary-link"></app-link>
+        
+        </div>
+        
+        <a href="/homepage">
+            <app-img src="../../../assets/img/logo.png" alt="Logo pixe pro gear" class="w-logo" imgClass="logo"></app-img>
+        </a>
+        
+        <div class="w-link">
+        
+            <app-link linkText="Connexion" href="/connect" classLink="link primary-link" iconClass="fa-solid fa-user"></app-link>
+            <app-button btnText="Panier" href="/cart" btnClass="btn btn-primary" iconClass="fas fa-shopping-cart"></app-button>
+        
+        </div>
+    </div>
+</div>
+  
+
+

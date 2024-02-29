@@ -1,0 +1,72 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    width: fit-content;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    border: 2px solid #192229;
+    color: #192229;
+}
+
+.btn-primary:hover {
+    background: #192229;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #C5481B;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    border: 2px solid #C5481B;
+    background-color: #fff;
+    color: #C5481B;
+}
+
+.btn-tertiary {
+    border: 2px solid #F9ECE8;
+    color: #F9ECE8;
+}
+
+.btn-tertiary:hover {
+    background: #F9ECE8;
+    color: #C5481B;
+}
+
+.btn-link {
+    color: #192229;
+}
+
+.btn-link:hover {
+    color: #C5481B;
+}
+
+.btn-full {
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+    .btn-full {
+        padding: 8px 16px;
+    }
+
+    .validate {
+        display: none;
+    }
+}

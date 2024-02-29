@@ -1,0 +1,94 @@
+.background {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: rotate(-50%, -50%);
+    filter: opacity(0.8);
+    transition: all 0.3s ease;
+}
+
+.background-1 {
+    background-image: url('../../../../../assets/img/fond-1.png');
+}
+
+.background-2 {
+    background-image: url('../../../../../assets/img/fond-2.png');
+}
+
+.background-3 {
+    background-image: url('../../../../../assets/img/fond-3.png');
+}
+
+.card {
+    display: block;
+    padding: 16px 24px;
+    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .background {
+    filter: opacity(1);
+}
+
+.w-img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.w-img-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-card-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.w-card-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.w-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.w-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.w-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

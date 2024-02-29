@@ -1,0 +1,14 @@
+.card {
+    grid-column: 4 span;
+}
+
+.w-title-products {
+    grid-column: 12 span;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .card {
+        grid-column: 12 span;
+    }
+}

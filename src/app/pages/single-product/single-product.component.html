@@ -1,0 +1,42 @@
+<section class="section">
+    <div class="container">
+
+        <div *ngIf="product" class="w-bloc">
+
+            <div class="w-title-single">
+                <div class="header-single">
+
+                    <div class="header-txt">
+                        <app-title [title]="product.model" level="2" classTitle="title title-lvl-1"></app-title>
+                        <app-subtitle [subtitle]="product.brand" classSubtitle="subtitle-primary subtitle-lvl-1"></app-subtitle>
+                    </div>
+
+                    <div class="header-img-single">
+                        <app-img [src]="product.logo" alt="{{ product.brand }} {{ product.model }}" class="w-img" imgClass="bg-img"></app-img>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="w-img-single">
+                <div [ngClass]="backgroundClass" class="background"></div>
+                <app-img [src]="product.image" alt="{{ product.brand }} {{ product.model }}" class="w-img" imgClass="bg-img"></app-img>
+            </div>
+            
+            <div class="w-txt-single">
+                <app-title title="{{ product.brand }} {{ product.model }}" level="4" classTitle="title title-lvl-2"></app-title>
+                <app-text classText="text text-lvl-2 description" [text]="product.description"></app-text>
+                <app-text classText="text text-lvl-1" text="{{ product.price }}€"></app-text>
+                <app-button (click)="addToCart(product)" href="/test" btnClass="btn btn-secondary" btnText="Ajouter au panier"></app-button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<app-btn-large></app-btn-large>
+<app-reassurance></app-reassurance>
+<app-modal [show]="showModal" [title]="modalTitle" [message]="modalMessage"></app-modal>
+
+  

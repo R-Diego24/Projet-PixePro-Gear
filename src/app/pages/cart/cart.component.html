@@ -1,0 +1,60 @@
+<section class="section">
+  <div class="container">
+    <div class="w-bloc">
+      
+      <div class="w-head">
+        <app-title title="Panier" level="2" classTitle="title title-lvl-2"></app-title>
+      </div>
+
+      <div class="w-content-cart" *ngIf="cartItems.length > 0; else emptyCart">
+
+        <table>
+
+          <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Prix unitaire</th>
+            <th>Prix total</th>
+            <th></th>
+          </tr>
+
+          <tr *ngFor="let item of cartItems">
+
+            <td>{{item.brand}} {{item.model}}</td>
+            <td class="w-less-more">
+              <app-btn-icon (click)="updateQuantity(item.id, item.quantity - 1)" btnClass="btn-icon btn-icon-primary" iconClass="icon-btn fa-solid fa-minus"></app-btn-icon>
+              {{ item.quantity }}
+              <app-btn-icon (click)="updateQuantity(item.id, item.quantity + 1)" btnClass="btn-icon btn-icon-primary" iconClass="icon-btn fa-solid fa-plus"></app-btn-icon>
+            </td>
+            <td>{{ item.price }}€</td>
+            <td>{{ item.quantity * item.price }}€</td>
+            <td><app-btn-icon (click)="removeFromCart(item.id)" btnClass="btn-icon btn-icon-primary" iconClass="icon-btn fas fa-times"></app-btn-icon></td>
+          
+          </tr>
+
+        </table>
+        
+      </div>
+      
+      <ng-template #emptyCart>
+        <div class="empty-cart">
+            <app-text text="Votre panier est vide." classText="text text-lvl-2"></app-text>
+        </div>
+      </ng-template>
+
+      <app-result-cart class="w-result"></app-result-cart>
+
+      <div class="btn-group" *ngIf="cartItems.length > 0; else showExploreButton">
+        <app-button href="/checkout" btnText="Valider votre commande" btnClass="btn btn-secondary validate"></app-button>
+        <app-button href="/products" btnText="Continuer vos achats" btnClass="btn btn-link"></app-button>
+      </div>
+
+      <ng-template #showExploreButton>
+        <div class="btn-group">
+          <app-button href="/products" btnText="Découvrir nos produits" btnClass="btn btn-primary"></app-button>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</section>

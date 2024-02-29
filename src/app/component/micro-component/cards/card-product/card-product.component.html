@@ -1,0 +1,36 @@
+<div class="card" (click)="navigate(product, $event)">
+
+    <div class="w-img-card">
+        <div [ngClass]="backgroundClass" class="background"></div>
+        <app-img class="w-img-product" imgClass="img-product" [src]="product.image" [alt]="product.model"></app-img>
+    </div>
+
+    <div class="w-card-content">
+        <div class="w-card-infos">
+
+            <div class="w-info">
+
+                <div class="info-content">
+                    <app-title [title]="product.model" className="title title-lvl-2" level="3"></app-title>
+                    <app-subtitle [subtitle]="product.brand" classSubtitle="subtitle-primary subtitle-lvl-2"></app-subtitle>
+                </div>
+
+                <div class="w-card-btn">
+                    <app-btn-icon-like (click)="likeProduct($event, product.id)" btnLikeClass="btn-icon btn-icon-primary"></app-btn-icon-like>
+                </div>
+
+            </div>
+    
+            <div class="w-price">
+                <div class="price-content">
+                    <app-text [text]="product.price + '€'" classText="text text-lvl-2"></app-text>
+                </div>
+
+                <div class="w-card-btn">
+                    <app-btn-icon (click)="emitAddToCartEvent($event)" btnClass="btn-icon btn-icon-primary" iconClass="icon-btn fa-solid fa-cart-plus"></app-btn-icon>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

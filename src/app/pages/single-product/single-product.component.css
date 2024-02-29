@@ -1,0 +1,73 @@
+.background {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    top: 70px;
+    left: -150px;
+    transition: all 0.3s ease;
+}
+
+.background-1 {
+    background-image: url('../../../assets/img/fond-1.png');
+}
+
+.background-2 {
+    background-image: url('../../../assets/img/fond-2.png');
+}
+
+.background-3 {
+    background-image: url('../../../assets/img/fond-3.png');
+}
+
+.w-title-single {
+    grid-column: 12 span;
+}
+
+.header-single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img-single {
+    max-width: 150px;
+}
+
+.w-img-single {
+    position: relative;
+    grid-column: 6 span;
+}
+
+.w-txt-single {
+    grid-column: 7/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 24px;
+    border-left: 5px solid #C5481B;
+    background-color: #F9ECE8;
+}
+
+@media screen and (max-width: 768px){
+    .w-img-single {
+        grid-column: 12 span;
+    }
+
+    .w-txt-single {
+        grid-column: 12 span;
+    }
+
+    .background {
+        left: -50px;
+    }
+
+    .header-img-single {
+        max-width: 100px;
+    }
+    
+}

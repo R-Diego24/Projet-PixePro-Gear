@@ -1,0 +1,15 @@
+<div class="cart-total">
+        
+    <app-title title="Récapitulatif de votre commande" level="4" classTitle="title title-lvl-4 result-cart"></app-title>
+
+    <div class="w-result-infos">
+        <app-text text="Montant total : {{ total }}€." classText="text text-lvl-2 result-cart"></app-text>
+        <app-text text="Nombre d'articles : {{ totalItems }}." classText="text text-lvl-2 result-cart"></app-text>
+    </div>
+    
+    <app-title title="Total : {{ total }}€" level="4" classTitle="title title-lvl-4 result-cart"></app-title>
+
+    <app-button *ngIf="totalItems > 0" href="/cart" btnText="Valider votre commande" btnClass="btn btn-tertiary"></app-button>
+    
+</div>
+  
